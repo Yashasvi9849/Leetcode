@@ -1,0 +1,36 @@
+Binary search is not limited to finding an exact element. In practice, it is also widely used to locate boundaries in sorted data. This project implements three commonly used binary search variations, each solving a different real-world and interview-style problem.
+
+1. indexOf . Exact Match Search
+
+This is the classic form of binary search.
+
+Searches for a target value in a sorted array
+
+Returns the index if the element is found
+
+Returns -1 if the element does not exist
+
+This method is best used when the requirement is simply to check whether an element exists and retrieve its position.
+
+2. lowerBound . First Position ≥ Target
+
+This method finds the first index where the value is greater than or equal to the target.
+
+Useful when working with duplicate values
+
+Commonly used to determine insertion positions
+
+Returns array.length if all elements are smaller than the target
+
+This variation is frequently used in range queries and problems where the first occurrence of a value matters.
+3. upperBound . First Position > Target
+
+This method finds the first index where the value is strictly greater than the target.
+
+Helps identify the position immediately after the last occurrence
+
+Useful for counting duplicates and range calculations
+
+Returns array.length if no value is greater than the target
+
+A common pattern is using upperBound - lowerBound to compute how many times a value appears in a sorted array.
